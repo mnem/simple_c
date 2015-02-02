@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="simple_c" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAp-xm-JgF">
+                                <rect key="frame" x="261" y="66" width="76.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prJ-mf-0ez">
+                                <rect key="frame" x="240" y="28" width="120" height="30"/>
+                                <state key="normal" title="Run Swift version">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleSwiftTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ksF-RG-nrU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uia-hZ-Dmp">
+                                <rect key="frame" x="251" y="285" width="97" height="30"/>
+                                <state key="normal" title="Run C version">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1SO-Xi-RsK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyV-KG-het">
+                                <rect key="frame" x="274" y="323" width="50.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="prJ-mf-0ez" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3Un-Hd-a26"/>
+                            <constraint firstAttribute="centerX" secondItem="prJ-mf-0ez" secondAttribute="centerX" id="Bs3-qX-Me2"/>
+                            <constraint firstAttribute="centerX" secondItem="uia-hZ-Dmp" secondAttribute="centerX" id="Dyi-mG-1i5"/>
+                            <constraint firstItem="TAp-xm-JgF" firstAttribute="top" secondItem="prJ-mf-0ez" secondAttribute="bottom" constant="8" id="Gn2-8y-ZrF"/>
+                            <constraint firstAttribute="centerX" secondItem="TAp-xm-JgF" secondAttribute="centerX" id="OPR-cf-KJa"/>
+                            <constraint firstItem="zyV-KG-het" firstAttribute="top" secondItem="uia-hZ-Dmp" secondAttribute="bottom" constant="8" id="SSp-AJ-i5f"/>
+                            <constraint firstAttribute="centerY" secondItem="uia-hZ-Dmp" secondAttribute="centerY" id="YAz-PQ-tXC"/>
+                            <constraint firstAttribute="centerX" secondItem="zyV-KG-het" secondAttribute="centerX" id="m7X-0q-JQs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cLabel" destination="zyV-KG-het" id="9b6-P0-aeP"/>
+                        <outlet property="swiftLabel" destination="TAp-xm-JgF" id="DgA-7R-sih"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
